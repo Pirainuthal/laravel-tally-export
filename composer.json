@@ -1,0 +1,80 @@
+{
+    "name": "pirainuthal/laravel-tally-export",
+    "description": "Export sales invoices, receipts and ledger masters from Laravel to Tally Prime / Tally ERP 9 XML, with balance checks, GST helpers and an optional HTTP push.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "tally",
+        "tally-prime",
+        "tally-erp-9",
+        "xml",
+        "gst",
+        "accounting",
+        "india",
+        "invoice",
+        "export"
+    ],
+    "homepage": "https://github.com/Pirainuthal/laravel-tally-export",
+    "authors": [
+        {
+            "name": "Pirainuthal S",
+            "homepage": "https://github.com/Pirainuthal",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "ext-mbstring": "*",
+        "ext-simplexml": "*",
+        "ext-xmlwriter": "*",
+        "guzzlehttp/guzzle": "^7.8",
+        "illuminate/console": "^11.0|^12.0",
+        "illuminate/contracts": "^11.0|^12.0",
+        "illuminate/database": "^11.0|^12.0",
+        "illuminate/http": "^11.0|^12.0",
+        "illuminate/support": "^11.0|^12.0"
+    },
+    "require-dev": {
+        "larastan/larastan": "^3.0",
+        "laravel/pint": "^1.17",
+        "orchestra/testbench": "^9.6|^10.0",
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pirainuthal\\TallyExport\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Pirainuthal\\TallyExport\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "lint": "pint --test",
+        "format": "pint",
+        "analyse": "phpstan analyse --memory-limit=1G",
+        "check": [
+            "@lint",
+            "@analyse",
+            "@test"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pirainuthal\\TallyExport\\TallyExportServiceProvider"
+            ],
+            "aliases": {
+                "Tally": "Pirainuthal\\TallyExport\\Facades\\Tally"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
