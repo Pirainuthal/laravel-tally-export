@@ -1,0 +1,35 @@
+<ENVELOPE>
+  <HEADER>
+    <TALLYREQUEST>Import Data</TALLYREQUEST>
+  </HEADER>
+  <BODY>
+    <IMPORTDATA>
+      <REQUESTDESC>
+        <REPORTNAME>All Masters</REPORTNAME>
+      </REQUESTDESC>
+      <REQUESTDATA>
+        <TALLYMESSAGE xmlns:UDF="TallyUDF">
+          <LEDGER NAME="Kaveri Traders" ACTION="Create">
+            <NAME.LIST TYPE="String">
+              <NAME>Kaveri Traders</NAME>
+            </NAME.LIST>
+            <PARENT>Sundry Debtors</PARENT>
+            <ISBILLWISEON>Yes</ISBILLWISEON>
+            <COUNTRYNAME>India</COUNTRYNAME>
+            <LEDSTATENAME>Tamil Nadu</LEDSTATENAME>
+            <GSTREGISTRATIONTYPE>Regular</GSTREGISTRATIONTYPE>
+            <PARTYGSTIN>33ABCDE1234F1Z7</PARTYGSTIN>
+          </LEDGER>
+        </TALLYMESSAGE>
+        <TALLYMESSAGE xmlns:UDF="TallyUDF">
+          <LEDGER NAME="Sales @ 18%" ACTION="Create">
+            <NAME.LIST TYPE="String">
+              <NAME>Sales @ 18%</NAME>
+            </NAME.LIST>
+            <PARENT>Sales Accounts</PARENT>
+          </LEDGER>
+        </TALLYMESSAGE>
+      </REQUESTDATA>
+    </IMPORTDATA>
+  </BODY>
+</ENVELOPE>
