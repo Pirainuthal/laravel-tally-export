@@ -4,7 +4,7 @@
 
 [![CI](https://github.com/Pirainuthal/laravel-tally-export/actions/workflows/ci.yml/badge.svg)](https://github.com/Pirainuthal/laravel-tally-export/actions/workflows/ci.yml)
 [![PHP](https://img.shields.io/badge/PHP-8.2%20%7C%208.3%20%7C%208.4-777BB4?logo=php&logoColor=white)](composer.json)
-[![Laravel](https://img.shields.io/badge/Laravel-11%20%7C%2012-FF2D20?logo=laravel&logoColor=white)](composer.json)
+[![Laravel](https://img.shields.io/badge/Laravel-12-FF2D20?logo=laravel&logoColor=white)](composer.json)
 [![PHPStan](https://img.shields.io/badge/PHPStan-level%208-brightgreen)](phpstan.neon.dist)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
@@ -548,7 +548,7 @@ composer check       # all three
   Every generated voucher is parsed back with DOM and checked to be well-formed, with signed amounts summing to zero and `ISDEEMEDPOSITIVE` matching the sign.
 - **Feature** (18 tests, Orchestra Testbench): service provider and config merging, the facade, HTTP push with `Http::fake` (success, `LINEERROR`, HTTP 500, connection refused, garbage body), and `tally:export` against an in-memory SQLite table (date range, default path, stdout, `--push` success, errors and exceptions, empty range, option validation, invalid record).
 
-CI runs Pint and PHPStan, then the test matrix of PHP 8.2 / 8.3 / 8.4 × Laravel 11 / 12, plus one `--prefer-lowest` job.
+CI runs Pint and PHPStan, then the test matrix of PHP 8.2 / 8.3 / 8.4 × Laravel 12, plus one `--prefer-lowest` job.
 
 ## Roadmap
 
